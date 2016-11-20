@@ -5,3 +5,4 @@
 3、我们分析了该系统的应有功能</p>
 4、我们设计了该系统的数据库模型</p>
 数据库</p>
+https://cloud.githubusercontent.com/assets/16076963/20460397/adbb51c4-af1b-11e6-8b2b-465fc0f696b5.png
