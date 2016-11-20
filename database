@@ -1,0 +1,55 @@
+create database shop ;  
+use shop ;
+
+CREATE TABLE `customer` (
+  `customerid` int(11) NOT NULL,
+  `customername` varchar(45) DEFAULT NULL,
+  `customertel` varchar(45) DEFAULT NULL,
+  `customeraddress` varchar(45) DEFAULT NULL,
+  `customernote` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`customerid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `supplier` (
+  `supplierid` int(11) NOT NULL,
+  `suppliername` varchar(45) DEFAULT NULL,
+  `suppliertel` varchar(45) DEFAULT NULL,
+  `supplieraddress` varchar(45) DEFAULT NULL,
+  `suppliernote` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`supplierid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `good` (
+  `goodid` int(11) NOT NULL,
+  `goodname` varchar(45) DEFAULT NULL,
+  `goodprice` double DEFAULT NULL,
+  `goodamount` int(11) DEFAULT NULL,
+  `goodunit` varchar(45) DEFAULT NULL,
+  `goodtime` datetime DEFAULT NULL,
+  `goodnote` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`goodid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `orderclass` (
+  `orderclassid` int(11) NOT NULL,
+  `orderclassname` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`orderclassid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `orderitem` (
+  `orderitemid` int(11) NOT NULL,
+  `orderclassid` int(11) DEFAULT NULL,
+  `orderitemname` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`orderitemid`),
+  KEY `orderclassid_idx` (`orderclassid`),
+  CONSTRAINT `orderclassid` FOREIGN KEY (`orderclassid`) REFERENCES `orderclass` (`orderclassid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `orderdetail` (
+  `orderdetailid` int(11) NOT NULL,
+  `orderitemid` int(11) DEFAULT NULL,
+  `orderdetail` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`orderdetailid`),
+  KEY `orderitemid_idx` (`orderitemid`),
+  CONSTRAINT `orderitemid` FOREIGN KEY (`orderitemid`) REFERENCES `orderitem` (`orderitemid`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
