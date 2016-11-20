@@ -8,3 +8,4 @@
 ![er](https://cloud.githubusercontent.com/assets/16076963/20460410/1a742836-af1c-11e6-9bd9-cc70b0997d32.png)</p>
 </p>
 用例图</p>
+![default](https://cloud.githubusercontent.com/assets/16076941/20460540/48f3379c-af21-11e6-9181-8fa0fc89256b.png)
