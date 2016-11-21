@@ -13,3 +13,4 @@
 
 ##1.范围定义阶段
 1.1初始问题陈述如下表：
+![61n2pl279 0 ina9ye1_fg](https://cloud.githubusercontent.com/assets/16076963/20485703/bb0f12d0-b037-11e6-867d-36076ca85dd0.png)
