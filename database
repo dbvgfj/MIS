@@ -53,3 +53,8 @@ CREATE TABLE `orderdetail` (
   KEY `orderitemid_idx` (`orderitemid`),
   CONSTRAINT `orderitemid` FOREIGN KEY (`orderitemid`) REFERENCES `orderitem` (`orderitemid`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `shop`.`orderclass`(`orderclassid`,`orderclassname`)VALUES(1,采购);
+INSERT INTO `shop`.`orderclass`(`orderclassid`,`orderclassname`)VALUES(2,采购退货);
+INSERT INTO `shop`.`orderclass`(`orderclassid`,`orderclassname`)VALUES(1,销售);
+INSERT INTO `shop`.`orderclass`(`orderclassid`,`orderclassname`)VALUES(1,销售退货);
