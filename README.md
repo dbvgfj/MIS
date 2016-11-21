@@ -11,3 +11,5 @@
 用例图</p>
 ![default](https://cloud.githubusercontent.com/assets/16076941/20460540/48f3379c-af21-11e6-9181-8fa0fc89256b.png)
 
+##1.范围定义阶段
+1.1初始问题陈述如下表：
